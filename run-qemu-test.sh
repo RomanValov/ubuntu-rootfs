@@ -2,6 +2,8 @@
 
 set -ex
 
+docker build --tag ubuntu-rootfs .
+
 container=$(docker create ubuntu-rootfs)
 docker export --output=ubuntu.tar $container
 docker rm $container
