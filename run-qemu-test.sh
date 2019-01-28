@@ -8,7 +8,7 @@ container=$(docker create ubuntu-rootfs)
 docker export --output=ubuntu.tar $container
 docker rm $container
 
-sudo virt-make-fs ubuntu-rootfs.tar ubuntu.img
+sudo virt-make-fs ubuntu.tar ubuntu.img
 rm ubuntu.tar
 
 sudo qemu-system-x86_64 \
