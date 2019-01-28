@@ -17,5 +17,5 @@ rm ubuntu.tar
 sudo qemu-system-x86_64 \
   -kernel /boot/vmlinuz-$(uname -r) \
   -append "root=/dev/sda rw" \
-  -drive file=ubuntu.img,format=rawls
+  -drive file=ubuntu.img,format=raw
 rm ubuntu.img
