@@ -10,7 +10,7 @@ container=$(docker create ubuntu-rootfs)
 docker export --output=ubuntu.tar $container
 docker rm $container
 
-sudo virt-make-fs --format=qcow2 ubuntu.tar ubuntu.img
+sudo virt-make-fs --format=qcow2 --size=+500M ubuntu.tar ubuntu.img
 sudo chown $USER ubuntu.img
 rm ubuntu.tar
 
