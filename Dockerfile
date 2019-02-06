@@ -8,4 +8,6 @@ RUN apt-get update && \
     $(awk '{print $1'} ubuntu.manifest) \
     && rm -rf /var/lib/apt/lists/*
 
+COPY grub.cfg /boot/grub/grub.cfg
+
 RUN echo "root:passworD1" | chpasswd
